@@ -9,7 +9,7 @@ jobs:
   forced-merge-to-staging:
     if: ${{ github.event.issue.pull_request }}
     with:
-      target-branch: staging
+      target-branch: main
       comment-starts: "/forceDeployStaging"
     steps:
       - id: reviews
