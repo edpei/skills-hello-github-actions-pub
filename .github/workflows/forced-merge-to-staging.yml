@@ -22,7 +22,7 @@ jobs:
               --json reviewDecision \
               --jq '.reviewDecision')
           echo "state=$state" >> "$GITHUB_OUTPUT"
-          echo "NENENENE $state -- $GITHUB_OUTPUT aaa ${{ github.event.issue.number }} - bbb ${{ github.event.number }}"
+          echo "NENENENE $state $pr -- $GITHUB_OUTPUT aaa ${{ github.event.issue.number }} - bbb ${{ github.event.number }}"
   runTests:
     runs-on: [ubuntu-latest]
     needs: forced-merge-to-staging
