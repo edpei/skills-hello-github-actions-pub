@@ -21,8 +21,8 @@ jobs:
               --repo "edpei/skills-hello-github-actions-pub" \
               --json reviewDecision \
               --jq '.reviewDecision')
-          echo "state=$state" >> "$GITHUB_OUTPUT"
           echo "NENENENE $state $pr -- $GITHUB_OUTPUT aaa ${{ github.event.issue.number }} - bbb ${{ github.event.number }}"
+          echo "state=$state" >> "$GITHUB_OUTPUT"
   runTests:
     runs-on: [ubuntu-latest]
     needs: forced-merge-to-staging
