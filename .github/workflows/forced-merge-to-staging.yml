@@ -30,4 +30,4 @@ jobs:
       - id: echos
         run: |
           echo "Running tests"
-          echo "NENENENE ${{ needs.forced-merge-to-staging.event.review.state }}"
+          echo "NENENENE ${{ needs.forced-merge-to-staging.event.reviews }}"
