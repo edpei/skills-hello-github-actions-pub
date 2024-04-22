@@ -22,4 +22,4 @@ jobs:
               --json reviewDecision \
               --jq '.reviewDecision')
           echo "state=$state" >> "$GITHUB_OUTPUT"
-          echo "NENENENE $state ${{ github.event.issue.number }} ${{ github.event.number }}"
+          echo "NENENENE $state -- $GITHUB_OUTPUT aaa ${{ github.event.issue.number }} - bbb ${{ github.event.number }}"
