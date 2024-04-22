@@ -7,7 +7,7 @@ on:
 
 jobs:
   forced-merge-to-staging:
-    if: ${{ github.event.issue.pull_request && contains(github.event.comment.html_url, '/forceDeployStaging')}}
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '/forceDeployStaging')}}
     runs-on: [self-hosted]
     outputs:
       reviews: ${{ steps.reviews.outputs.state }}
