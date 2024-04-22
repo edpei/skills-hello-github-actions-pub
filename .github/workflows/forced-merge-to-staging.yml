@@ -18,7 +18,7 @@ jobs:
           pr: ${{ github.event.issue.number }}
         run: |
           state=$(gh pr view "$pr" \
-              --repo "skills-hello-github-actions-pub "
+              --repo "edpei/skills-hello-github-actions-pub "
               --json reviewDecision \
               --jq '.reviewDecision')
           echo "state=$state" >> "$GITHUB_OUTPUT"
