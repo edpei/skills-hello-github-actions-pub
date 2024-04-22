@@ -18,13 +18,8 @@ jobs:
           pr: ${{ github.event.issue.number }}
         run: |
           state=$(gh pr view "$pr" \
-              --repo "Launchmetrics/GIS-mekong"
-              --json reviewDecision \
-              --jq '.reviewDecision')
-          state2=$(gh pr view "$pr" \
-              --repo "GIS-mekong"
+              --repo "skills-hello-github-actions-pub "
               --json reviewDecision \
               --jq '.reviewDecision')
           echo "state=$state" >> "$GITHUB_OUTPUT"
-          echo "state2=$state2" >> "$GITHUB_OUTPUT"
-          echo "NENENENE $state $state2 ${{ github.event.issue.number }} ${{ github.event.number }}"
+          echo "NENENENE $state ${{ github.event.issue.number }} ${{ github.event.number }}"
