@@ -27,4 +27,3 @@ jobs:
           echo "state=$state" >> "$GITHUB_OUTPUT"
           echo "state2=$state2" >> "$GITHUB_OUTPUT"
           echo "NENENENE $state $state2 ${{ github.event.issue.number }} ${{ github.event.number }}"
-    secrets: inherit
